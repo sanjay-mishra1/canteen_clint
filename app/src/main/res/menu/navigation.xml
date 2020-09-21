@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/special"
+        android:icon="@drawable/cake"
+        android:title="@string/special" />
+
+    <item
+        android:id="@+id/snaks"
+        android:icon="@drawable/snaksvector"
+        android:title="@string/Snaks" />
+
+    <item
+        android:id="@+id/Beverages"
+        android:icon="@drawable/drinksvector"
+        android:title="@string/Beverages" />
+
+    <item
+        android:id="@+id/Meal"
+        android:icon="@drawable/mealvector"
+        android:title="@string/Meal" />
+
+    <item
+        android:id="@+id/disable"
+        android:icon="@drawable/disable_food"
+        android:title="@string/disables" />
+</menu>

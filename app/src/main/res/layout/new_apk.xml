@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+<TextView
+    android:layout_width="match_parent"
+    android:textSize="18sp"
+    android:textColor="#000"
+    android:text="Upload new APK"
+    android:layout_marginTop="50dp"
+    android:gravity="center_horizontal"
+     android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_width="60dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:onClick="upload_apk_clicked"
+         android:id="@+id/select_app"
+        android:background="@drawable/shadow"
+        android:layout_height="60dp" />
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:id="@+id/progressbar"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="match_parent"
+        android:text="Upload"
+        android:layout_marginTop="90dp"
+        android:visibility="gone"
+        android:id="@+id/uploadButton"
+        android:onClick="upload_button_clicked"
+        android:layout_height="wrap_content" />
+</LinearLayout>

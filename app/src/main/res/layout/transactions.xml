@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:id="@+id/relativeLayout2">
+
+    <TextView
+        android:id="@+id/orderno1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/total_final2"
+        android:layout_marginTop="9dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Orderno     Loading.."
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/transactions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/deliverytime"
+        android:layout_below="@+id/deliverytime"
+        android:layout_marginTop="17dp">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/total_final2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/Orderstatus1"
+        android:layout_below="@+id/orderno1"
+        android:layout_marginTop="16dp"
+        android:text="TotalAmount    Loading.."
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/Orderstatus1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/total_final2"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:text="Status   Loading.."
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/deliverytime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/Orderstatus1"
+        android:layout_below="@+id/Orderstatus1"
+        android:layout_marginTop="11dp"
+        android:text="Order at    Loading.."
+        android:textSize="18sp" />
+</RelativeLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".cakeActivity"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/mainRelative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/MainImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/textview"
+                android:onClick="mainImageOnclick"
+                android:src="@drawable/mainlogo" />
+
+            <ProgressBar
+                android:id="@+id/Progressbarmain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="73dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Click on the logo to enter the Image of the cake"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/MainImage"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Choose more images of the cake"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview1">
+
+                <ImageView
+                    android:id="@+id/ExtraImage1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="24dp"
+                    android:onClick="FirstImageOnclick"
+                    app:srcCompat="@drawable/plus" />
+
+                <ImageView
+                    android:id="@+id/ExtraImage2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@+id/ExtraImage1"
+                    android:onClick="SecondImageOnclick"
+                    app:srcCompat="@drawable/plus" />
+
+                <ImageView
+                    android:id="@+id/ExtraImage3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_toEndOf="@+id/ExtraImage2"
+                    android:onClick="ThiredImageOnclick"
+                    app:srcCompat="@drawable/plus" />
+
+                <ImageView
+                    android:id="@+id/ExtraImage4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignStart="@+id/ExtraImage1"
+                    android:layout_below="@+id/ExtraImage1"
+                    android:onClick="FourthImageOnclick"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/plus" />
+
+                <ImageView
+                    android:id="@+id/ExtraImage5"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/ExtraImage2"
+                    android:layout_toStartOf="@+id/ExtraImage3"
+                    android:onClick="FifthImageOnclick"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/plus" />
+
+                <ImageView
+                    android:id="@+id/ExtraImage6"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignStart="@+id/ExtraImage3"
+                    android:layout_below="@+id/ExtraImage3"
+                    android:onClick="SixthImageOnclick"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/plus" />
+
+                <TextView
+                    android:id="@+id/more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/ExtraImage3"
+                    android:drawableRight="@drawable/arrow_down"
+                    android:onClick="MoreImageOnclick"
+                    android:text="More" />
+
+                <ProgressBar
+                    android:id="@+id/Progressbar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/ExtraImage1"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="23dp"
+                    android:visibility="gone" />
+
+
+                <ProgressBar
+                    android:id="@+id/progressbar3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ExtraImage3"
+                    android:layout_alignEnd="@+id/ExtraImage3"
+                    android:layout_marginBottom="22dp"
+                    android:layout_marginEnd="24dp"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/progressbar4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/ExtraImage4"
+                    android:layout_below="@+id/more"
+                    android:layout_marginEnd="24dp"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar2"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/more"
+                    android:layout_alignStart="@+id/ExtraImage2"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginStart="25dp"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/progressbar5"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/ExtraImage5"
+                    android:layout_below="@+id/more"
+                    android:layout_marginEnd="19dp"
+                    android:layout_marginTop="6dp"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/progressbar6"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/ExtraImage6"
+                    android:layout_below="@+id/more"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="6dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/InfoLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edit0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout3">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/CakeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="Cake Name"
+                    android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edit1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit0">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/gm200"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="Enter Price 200gm"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edit2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit1">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/gm500"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="Enter Price 500gm"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edit3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit2">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/gm1000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="Enter Price 1000gm"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textview3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/edit3"
+                android:layout_marginTop="18dp"
+                android:text="Enter extra informations about the cake"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textview3"
+                android:layout_marginTop="14dp"
+                android:background="@color/common_google_signin_btn_text_light_default" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edit4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview3">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/Flavour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Flavour "
+                    android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edit5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit4">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/shape"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Shape"
+                    android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/save_food"
+            style="@android:style/Widget.Material.Light.Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/yello"
+            android:onClick="saveButtonOnclick"
+            android:text="next"
+            android:layout_gravity="bottom"
+            android:textColor="#fff"
+            android:visibility="visible" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.sanjay.canteen_clint.editFood"
+    tools:showIn="@layout/activity_edit_food">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/foodname1"
+            app:errorEnabled="true"
+            app:counterMaxLength="30"
+            app:counterEnabled="true"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="FoodName"
+                android:id="@+id/foodname"
+                android:inputType="text"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/price1"
+            app:errorEnabled="true"
+            app:counterMaxLength="30"
+            android:layout_below="@+id/foodname1"
+            android:paddingTop="10dp"
+
+             android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/Price"
+                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Original Price"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/discount"
+            app:errorEnabled="true"
+             app:errorTextAppearance="@color/colorPrimary"
+             android:layout_below="@+id/price1"
+            android:paddingTop="30dp"
+            android:layout_height="wrap_content">
+ 
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/fooddiscount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter amount to reduce"
+                android:inputType="number" />
+
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/calcaulatedDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/discount"
+            android:layout_marginLeft="50dp"
+            android:layout_weight="1"
+            android:text="0%"
+            android:textSize="18sp" />
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/description1"
+            app:errorEnabled="true"
+            app:counterMaxLength="30"
+            android:layout_below="@+id/calcaulatedDiscount"
+            android:paddingTop="30dp"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/description"
+                android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description1"
+            android:text="@string/save" />
+
+        <ProgressBar
+            android:id="@+id/progressBarHorizontal"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressDrawable="@android:drawable/divider_horizontal_textfield"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

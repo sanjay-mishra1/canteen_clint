@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/cardbackground"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/usercred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/img2"
+            android:transitionName="user_image"
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            app:srcCompat="@drawable/user" />
+
+        <TextView
+            android:id="@+id/UserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+
+            android:gravity="center_vertical"
+            android:paddingTop="5dp"
+            android:text="@string/loading" />
+    </LinearLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_marginStart="40dp"
+       android:orientation="vertical"
+       android:layout_height="wrap_content">
+    <RatingBar
+        android:id="@+id/rating"
+        style="@android:style/Widget.Material.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:numStars="5"
+        android:rating="3"
+         tools:targetApi="lollipop" />
+    <TextView
+        android:layout_width="match_parent"
+         android:id="@+id/text_message_body"
+         android:layout_height="wrap_content" />
+   </LinearLayout>
+</LinearLayout>

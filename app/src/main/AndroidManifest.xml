@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.sanjay.canteen_clint">
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+     <application
+         android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="false"
+          android:allowBackup="true"
+         android:theme="@style/AppTheme"
+         android:fullBackupContent="true">
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".ae" />
+        <activity
+            android:name=".Home"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Home" />
+        <activity
+            android:name=".login"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".user_data"
+            android:label="Some more informations" />
+        <activity
+            android:name=".SignUpActivity"
+            android:label="Register" />
+        <activity
+            android:name=".NewFood"
+            android:label="New Food"
+            android:parentActivityName=".Home"/>
+        <activity
+            android:name=".search.pendingorders"
+            android:label="New Orders"
+            android:theme="@style/AppTheme.NoActionBar"
+
+            android:parentActivityName=".Home" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.sanjay.canteen_clint.Home" />
+
+        <activity
+            android:name=".search.allOrders"
+            android:label="All Orders"
+            android:theme="@style/AppTheme.NoActionBar"
+
+            android:parentActivityName=".Home" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.sanjay.canteen_clint.Home" />
+
+        <activity
+            android:name=".editOrder"
+            android:label="Edit Order"
+            android:parentActivityName=".search.allOrders" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.sanjay.canteen_clint.Home" />
+
+        <activity
+            android:name=".Transactions"
+            android:label="Payments"
+            android:parentActivityName=".Home" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.sanjay.canteen_clint.Home" />
+
+        <activity
+            android:name=".TransactionView"
+            android:label="Transactions"
+            android:parentActivityName=".Home" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.sanjay.canteen_clint.Home" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar"
+
+            android:parentActivityName=".Home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sanjay.canteen_clint.Home" />
+        </activity>
+        <activity
+            android:name=".editFood"
+             android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sanjay.canteen_clint.MainActivity" />
+
+        </activity>
+        <activity
+            android:name=".cakeActivity"
+            android:label="@string/cake"
+            android:parentActivityName=".Home">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.sanjay.canteen_clint.MainActivity" />
+        </activity>
+        <activity
+            android:name=".editcake"
+            android:label="Edit cake"
+            android:theme="@style/AppTheme.NoActionBar"
+
+            android:parentActivityName=".Home">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sanjay.canteen_clint.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".editDetailCake"
+             android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".editcake">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sanjay.canteen_clint.MainActivity" />
+        </activity>
+        <activity
+            android:name=".pendingPayments"
+            android:label="Payments"
+            android:parentActivityName=".editcake">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sanjay.canteen_clint.MainActivity" />
+        </activity>
+        <activity android:name=".message.chat_app_Activity"
+            android:label="@string/messages"
+            android:parentActivityName=".Home"
+            />
+        <activity android:name=".message.imageViewer"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity android:name=".message.image_zoomer"
+            android:theme="@style/AppTheme.NoActionBar"
+
+            />
+        <activity android:name=".message.Message_Image"
+            android:theme="@style/AppTheme.NoActionBar"
+
+            />
+        <activity android:name=".message.chat_window"
+             android:theme="@style/AppTheme.NoActionBar"
+            />
+        <activity android:name=".message.GallerySample"
+            android:theme="@style/AppTheme.NoActionBar"
+
+            />
+         <activity android:name=".info.user_info"
+
+             android:parentActivityName=".info.all_users"
+
+             />
+         <activity android:name=".info.all_users"
+             android:label="All users"
+             android:theme="@style/AppTheme.NoActionBar"
+
+             android:parentActivityName=".Home"/>
+         <activity android:name=".feedback_system.Load_user_feedback"
+
+             android:parentActivityName=".feedback_system.all_feedbacks"
+             />
+         <activity android:name=".feedback_system.all_feedbacks"
+             android:label="@string/feedback"
+             android:parentActivityName=".Home"
+             />
+         <activity android:name=".payments.pending_from_app"
+             android:parentActivityName=".Home"
+             android:label="Payments"
+
+             />
+         <activity android:name=".payments.show_orders"
+             android:theme="@style/popup_dialog"
+             android:parentActivityName=".payments.pending_from_app"
+
+             />
+         <activity android:name=".payments.payment_admin"
+             android:parentActivityName=".Home"
+             android:label="Admin Payments"
+
+             />
+         <activity android:name=".payments.show_order_admin"
+             android:theme="@style/popup_dialog1"
+
+             />
+         <activity android:name=".payments.filters"
+             android:theme="@style/popup_dialog1"
+
+
+             />
+         <activity android:name=".info.food_info"
+             android:parentActivityName=".Home"
+             android:label="Food Info"
+
+             />
+         <activity android:name=".transactions.pay_extra"
+             android:theme="@style/popup_dialog1"
+
+             />
+         <activity android:name=".app_info.new_apk"
+             android:parentActivityName=".app_info.app_informations"
+             android:label="New APK"
+
+             />
+         <activity android:name=".app_info.apk_info"
+             android:parentActivityName=".app_info.app_informations"
+             android:label="App Information"
+
+             />
+         <activity android:name=".app_info.paytm_credentials"
+             android:parentActivityName=".app_info.app_informations"
+             android:label="Paytm Credentials"
+
+             />
+         <activity android:name=".app_info.app_informations"
+             android:parentActivityName=".Home"
+             android:label="Mcafe App"
+
+             />
+         <activity android:name=".app_info.payment_credentials"
+             android:parentActivityName=".app_info.app_informations"
+             android:label="Payment Credentials"
+
+             />
+         <activity android:name=".info.UserImg"
+              android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+             />
+         <activity android:name=".canteen_tools.issue"
+             android:label="New Issue"
+             android:parentActivityName=".Home"
+             />
+         <activity android:name=".canteen_tools.settings"
+             android:label="Settings"
+             android:parentActivityName=".Home"
+             />
+         <activity android:name=".NewCanteen"
+             android:label="New Canteen"
+             android:parentActivityName=".Home"
+
+             />
+         <activity android:name=".extra_classes.Loader"
+             android:label="@string/selectcanteen"
+             android:parentActivityName=".Home"
+
+             />
+         <activity android:name=".extra_classes.Home"
+             android:theme="@style/AppTheme.NoActionBar"
+             />
+         <activity android:name=".newChatScreen.GallerySample" />
+         <activity android:name=".newChatScreen.chat_app_Activity"
+             android:parentActivityName=".Home"
+            android:label="Messages"
+             />
+         <activity android:name=".newChatScreen.help_activity"
+             android:theme="@style/AppTheme.NoActionBar"
+
+             />
+         <activity android:name=".newChatScreen.image_zoomer"
+             android:theme="@style/AppTheme.NoActionBar"
+             />
+         <activity android:name=".newChatScreen.imageViewer"
+             android:theme="@style/AppTheme.NoActionBar"
+             />
+         <activity android:name=".newChatScreen.Message_Image"
+             android:theme="@style/AppTheme.NoActionBar"
+             />
+         <activity android:name=".feedback_system.all_issues"
+             android:label="All issues"
+             android:parentActivityName=".extra_classes.Home"
+             />
+         <activity android:name=".feedback_system.issues"
+             android:label="Issue"
+             android:parentActivityName=".feedback_system.all_issues"
+             />
+
+         <service android:name=".backgroundClass.Notification" />
+     </application>
+
+</manifest>

@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     tools:context="com.example.sanjay.canteen_clint.NewFood">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tap_on_logo_to_choose_food_image"
+                android:textAlignment="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_alignParentStart="true"
+
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_horizontal"
+                android:background="@mipmap/app_logo"
+                android:scaleType="center"
+                android:visibility="visible" />
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/foodinfo"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/editTextDisplayName"
+            android:inputType="text"
+            android:drawableStart="@drawable/mealvector"
+            android:drawableTint="@color/colorAccent"
+            android:drawablePadding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:hint="@string/enter_food_name" />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:tint="@color/colorAccent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+         android:src="@drawable/rupees_blackicon"/>
+        <EditText
+            android:id="@+id/editPrice"
+              android:drawablePadding="10dp"
+            android:paddingStart="33dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+            android:hint="@string/enter_price"
+            android:inputType="number" />
+</RelativeLayout>
+
+        <EditText
+
+            android:id="@+id/editDescription"
+            android:layout_width="match_parent"
+            android:inputType="text"
+            android:drawableStart="@drawable/ic_description_black_24dp"
+            android:drawableTint="@color/colorAccent"
+            android:drawablePadding="4dp"
+            android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+            android:hint="@string/enter_description" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textColor="#000"
+             android:onClick="food_type_selector_clicked"
+            android:drawableTint="@color/colorAccent"
+            android:drawableEnd="@drawable/arrow_down"
+            android:gravity="top"
+            android:paddingStart="6dp"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/ic_flag_black_24dp"
+            android:text="@string/select_type_for_food"
+            tools:targetApi="m" />
+        </LinearLayout>
+
+ <!--       <LinearLayout
+            android:id="@+id/relative"
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/relativeLayout"
+            android:background="@color/colorAccent">
+
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/meal"
+                    android:layout_width="80dp"
+                    android:layout_height="140dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="14dp"
+                    android:layout_toEndOf="@+id/Beverages"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/meal" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/Meal"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/meal"
+                        android:layout_width="80dp"
+                        android:layout_height="140dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="14dp"
+                        android:layout_toEndOf="@+id/Beverages"
+                        android:clickable="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/meal" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="@string/Meal"
+                        android:textSize="20sp"
+                        android:textColor="#000"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/spcial"
+                        android:layout_width="80dp"
+                        android:layout_height="140dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="22dp"
+                        android:layout_toEndOf="@+id/meal"
+                        android:clickable="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/special1" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="@string/Meal"
+                        android:textSize="20sp"
+                        android:textColor="#000"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>-->
+        <android.support.v7.widget.CardView
+            android:id="@+id/food_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="snacksclicked"
+
+                    android:focusable="true"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:paddingTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/snaks"
+                            android:tint="@color/colorAccent"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+
+                             android:layout_marginStart="11dp"
+                            android:clickable="true"
+
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/snaksvector" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:text="  Snacks      "
+                            android:textColor="#000"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="sepcialclicked"
+
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:paddingTop="10dp">
+
+                        <ImageView
+                             android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:tint="@color/colorAccent"
+                            android:layout_marginStart="22dp"
+                            android:clickable="true"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/cake"
+                            android:focusable="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+
+                            android:text="  Special         "
+
+                            android:textColor="#000"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="mealclicked"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:paddingTop="10dp">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="14dp"
+                            android:clickable="true"
+                            android:scaleType="fitXY"
+
+                            android:tint="@color/colorAccent"
+                            app:srcCompat="@drawable/mealvector"
+                            android:focusable="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+
+                            android:text="  Meal            "
+                            android:textColor="#000"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="beveragesclicked"
+
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="center_vertical|center_horizontal"
+                        android:paddingTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/Beverages"
+
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="8dp"
+                            android:clickable="true"
+                            android:scaleType="fitXY"
+                            android:tint="@color/colorAccent"
+                            app:srcCompat="@drawable/drinksvector"
+                            android:focusable="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:text="  Beverages"
+
+                            android:textColor="#000"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingTop="20dp">
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_color_rectangle"
+            android:text="reset"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+
+        <Button
+            android:id="@+id/buttonSave"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="saveButton"
+
+            android:layout_gravity="bottom"
+            android:background="@color/colorAccent"
+            android:layerType="software"
+            android:paddingLeft="55dp"
+            android:paddingRight="55dp"
+            android:text="@string/next"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</RelativeLayout>

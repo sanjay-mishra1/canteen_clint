@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".canteen_tools.settings"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:id="@+id/canteenimage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                />
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:id="@+id/progressbar"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/UserImage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:onClick="UploadUserImageClicked"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/circular_drawable" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/username_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shadow_rectangle"
+            android:onClick="callbackClicked"
+            android:paddingBottom="10dp"
+            android:drawableRight="@drawable/arrow_down"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:text="User name"
+
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edit1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:focusable="false"
+            android:visibility="invisible">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="User name"
+                android:inputType="textPersonName"
+                android:visibility="visible" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/email_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shadow_rectangle"
+             android:paddingBottom="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:text="E-mail id"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/paytm_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shadow_rectangle"
+            android:onClick="industry_clicked"
+            android:paddingBottom="10dp"
+            android:drawableRight="@drawable/arrow_down"
+
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:text="Paytm merchant mobile number"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edit5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:visibility="invisible">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/paytm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Paytm Number"
+                android:inputType="phone" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/bank_Textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shadow_rectangle"
+            android:drawableRight="@drawable/arrow_down"
+            android:onClick="channel_clicked"
+            android:paddingBottom="10dp"
+
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:text="Bank name"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edit2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:visibility="invisible">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bank name"
+                android:inputType="textVisiblePassword" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/ifsc_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shadow_rectangle"
+            android:onClick="mid_Clicked"
+            android:paddingBottom="10dp"
+            android:paddingStart="10dp"
+            android:drawableRight="@drawable/arrow_down"
+
+            android:paddingTop="10dp"
+            android:text="IFSC code"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/edit3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:visibility="invisible">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/ifsc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="IFSC Code"
+                android:inputType="textVisiblePassword" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/uploadButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:onClick="uplodadClicked"
+            android:text="Upload"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

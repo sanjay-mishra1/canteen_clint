@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:background="#fff">
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/circular_drawable"
+
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:scaleType="fitXY"
+         android:src="@drawable/circle_img"
+        app:srcCompat="@drawable/user" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/img1"
+         android:textSize="18sp"
+         android:text="sanjay"
+
+        android:gravity="center_vertical"
+        android:layout_toStartOf="@id/usertime"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/usermessage"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        android:textSize="16dp"
+        android:layout_below="@id/username"
+        android:layout_marginLeft="10dp"
+        android:layout_toEndOf="@id/img1"
+        android:lines="1"
+        android:text="Message" />
+
+    <TextView
+        android:id="@+id/usertime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/username"
+        android:layout_marginEnd="10dp"
+        android:gravity="end"
+        android:text="2:25 PM" />
+<TextView
+    android:layout_width="20dp"
+    android:layout_height="20dp"
+    android:visibility="gone"
+    android:gravity="center"
+    android:id="@+id/Unread_messages"
+    android:layout_alignBaseline="@id/usermessage"
+    android:layout_marginEnd="10dp"
+    android:textColor="#fff"
+    android:textSize="15sp"
+    android:background="@drawable/circular_background"
+    android:text="5"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@id/usertime"
+
+     />
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/imglink"
+        android:visibility="gone"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="77dp"
+        android:layout_toEndOf="@id/img1"
+        android:background="@color/lightgray" />
+</RelativeLayout>

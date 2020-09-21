@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+     android:layout_height="wrap_content"
+     android:id="@+id/appbar"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            app:contentInsetLeft="-10dp"
+            app:contentInsetStart="-10dp"
+            app:contentInsetStartWithNavigation="0dp"
+              android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_centerVertical="true"
+                    android:foregroundTint="#fff"
+                    android:onClick="endActivity"
+                    app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/back"
+                    android:text="All Orders"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+                    android:textColor="#fff" />
+
+                <ImageView
+                    android:id="@+id/search"
+                    android:layout_width="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="5dp"
+                     android:onClick="searchuttonOnclick"
+                    app:srcCompat="@drawable/ic_search_black_24dp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/searchBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                     android:layout_centerVertical="true"
+                     android:background="#fff"
+                     android:visibility="invisible">
+
+                    <ImageView
+                        android:id="@+id/backSearchBar"
+                        android:layout_width="30dp"
+                         android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:foregroundTint="#fff"
+                        android:onClick="endActivity"
+                        android:tint="@color/colorAccent"
+                        android:layout_marginStart="10dp"
+
+                        app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+                    <EditText
+                        android:id="@+id/searchBarEdittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@id/backSearchBar"
+                        android:layout_toStartOf="@id/cancelsearcBar"
+                        android:background="#fff"
+                        android:hint="@string/OrderNo"
+                        android:inputType="textUri"
+                        android:lines="1"
+                        android:singleLine="true" />
+
+                    <ImageView
+                        android:id="@+id/cancelsearcBar"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="5dp"
+                        android:foregroundTint="#fff"
+                        android:onClick="emptySearchbarClicked"
+                        app:srcCompat="@drawable/cancel" />
+                </RelativeLayout>
+            </RelativeLayout>
+         </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+

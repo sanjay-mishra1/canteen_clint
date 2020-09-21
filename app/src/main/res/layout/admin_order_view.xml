@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".payments.show_order_admin">
+     <android.support.design.widget.AppBarLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+         <android.support.v7.widget.Toolbar
+             android:layout_width="match_parent"
+             android:background="#fff"
+             android:layout_height="wrap_content">
+             <ImageButton
+                 android:layout_width="30dp"
+                 android:tint="@color/colorAccent"
+                 android:foregroundTint="#fff"
+                android:background="#fff"
+                 android:onClick="endActivity"
+                 app:srcCompat="@drawable/ic_arrow_back_black_24dp"
+                 android:layout_height="30dp" />
+             <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:id="@+id/relative"
+                 android:gravity="center_horizontal"
+                 android:layout_marginStart="40dp"
+                  android:orientation="horizontal"
+                 android:layout_height="wrap_content">
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:text="Rs12313232"
+                     android:textSize="20sp"
+                     android:textColor="#000"
+
+                      android:layout_centerHorizontal="true"
+                     android:layout_centerVertical="true"
+                     android:gravity="center_vertical"
+                     android:id="@+id/TotalAmount"
+                     android:layout_gravity="center_vertical"
+                     android:layout_height="wrap_content" />
+                 <Button
+                     android:layout_width="wrap_content"
+                     android:text="Pay All"
+                     android:id="@+id/payall"
+                     android:onClick="payAllClicked"
+                     android:layout_marginLeft="50dp"
+                      android:backgroundTint="@color/colorAccent"
+                      android:layout_toEndOf="@id/TotalAmount"
+                     android:layout_height="wrap_content" />
+
+             </LinearLayout>
+
+         </android.support.v7.widget.Toolbar>
+     </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:id="@+id/progressbar"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_above="@id/pay"
+        android:id="@+id/recycler_view"
+         android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorAccent"
+         android:text="Pay Rs 123"
+        android:onClick="payAmountClicked"
+        android:textColor="#fff"
+        android:visibility="gone"
+        android:textSize="20sp" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:transitionName="user_image"
+        android:id="@+id/userimage"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/user" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/name"
+        android:textColor="#000"
+        android:textSize="18sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+
+        android:layout_height="1dp"
+        android:background="@color/lightgray"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/lightgray"
+
+          android:layout_height="match_parent">
+
+<ProgressBar
+    android:layout_width="wrap_content"
+    android:id="@+id/progressbar"
+    android:layout_marginTop="3dp"
+    android:layout_centerHorizontal="true"
+    android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/recycler_view"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+</LinearLayout>
+</android.support.v4.widget.NestedScrollView>

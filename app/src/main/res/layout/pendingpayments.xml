@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/PendingRelative"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/Orderstatus1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:textColor="#fff"
+           android:textSize="18sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:text="@string/OrderNo"
+        />
+
+    <TextView
+        android:id="@+id/orderno1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+          android:layout_marginStart="26dp"
+        android:gravity="fill_vertical"
+        android:text="@string/OrderNo"
+        android:textColor="#000"
+         android:textSize="16sp" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginTop="10dp"
+         android:textColor="@android:color/holo_red_light"
+        android:textSize="16sp" />
+
+</LinearLayout>

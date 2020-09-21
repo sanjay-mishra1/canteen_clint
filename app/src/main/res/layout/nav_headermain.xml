@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="bottom"
+    android:id="@+id/relative"
+
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    <ImageView
+        android:layout_width="match_parent"
+        android:id="@+id/canteenimage"
+        android:contentInsetLeft="-10dp"
+        android:contentInsetStart="-10dp"
+         android:layout_height="180dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="180dp"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="25dp">
+    <TextView
+        android:id="@+id/name_image"
+        android:layout_width="80dp"
+        android:background="@drawable/circular_drawable"
+
+        android:layout_height="80dp"
+         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+         android:gravity="center"
+        android:padding="1dp"
+        android:visibility="gone"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text=" "
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+<ImageView
+    android:layout_width="70dp"
+    android:layout_height="70dp"
+    android:id="@+id/profile_img"
+      android:background="@drawable/circular_drawable"
+     />
+
+
+
+    <TextView
+        android:id="@+id/username_nav"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="15dp"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/name_image"
+        android:background="#6d000000"
+        android:textColor="#fff"
+        />
+        <TextView
+            android:id="@+id/phone_nav"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#6d000000"
+            android:textColor="#fff"
+
+            />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginStart="10dp"
+    >
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="#000"
+    android:textSize="18sp"
+    android:background="@drawable/shadow_rectangle"
+    android:drawableEnd="@drawable/arrow_right"
+    android:paddingStart="10dp"
+    android:clickable="true"
+    android:paddingTop="10dp"
+
+    android:paddingBottom="10dp"
+    android:id="@+id/newApk"
+    android:text="Upload new APK"
+    android:focusable="true" />
+
+    <TextView
+        android:id="@+id/apk_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow_rectangle"
+        android:clickable="true"
+        android:drawableEnd="@drawable/arrow_right"
+        android:focusable="true"
+
+        android:paddingBottom="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:text="Update APK Informations"
+        android:textColor="#000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/charges"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow_rectangle"
+        android:clickable="true"
+        android:drawableEnd="@drawable/arrow_right"
+        android:focusable="true"
+        android:paddingBottom="10dp"
+
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:text="Tax and other payment charges"
+
+        android:textColor="#000"
+        android:textSize="18sp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:background="@drawable/shadow_rectangle"
+        android:drawableEnd="@drawable/arrow_right"
+        android:paddingStart="10dp"
+
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textSize="18sp"
+        android:clickable="true"
+        android:id="@+id/paytm"
+        android:text="Paytm Credentials"
+        android:focusable="true" />
+</LinearLayout>
